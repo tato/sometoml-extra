@@ -1,0 +1,3 @@
+[submodule "sometoml"]
+	path = sometoml
+	url = git@github.com:tato/sometoml.git
