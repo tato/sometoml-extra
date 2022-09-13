@@ -13,6 +13,7 @@ pub fn main() !void {
 
     const table = try toml.parse(stdin.reader(), .{ .allocator = allocator });
     try std.json.stringify(FmtTable{ .table = table }, .{}, buffered_stdout.writer());
+    try buffered_stdout.flush();
 }
 
 const FmtTable = struct {
